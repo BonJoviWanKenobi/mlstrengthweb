@@ -31,23 +31,35 @@ section {
 
 #about {
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url("images/bg1.jpg");
+    url("images/bg2.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
   width: 100%;
+  display: flex;
+}
+
+#contact-us {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("images/bg2.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
 }
 
 li {
   list-style: none;
+  font-size: 16px;
 }
 
 a {
   color: white;
   text-decoration: none;
 }
-
 nav ul li::after {
   content: "";
   width: 0%;
@@ -116,6 +128,7 @@ h1 {
   margin: 10px 0 40px;
   width: 50%;
   text-align: center;
+  font-size: 22px;
 }
 
 #hero-btn {
@@ -142,9 +155,103 @@ h1 {
 .about-container {
   display: flex;
   flex-direction: row;
+  height: 50vh;
+  display: flex;
 }
 
-@media (max-width: 768px) {
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: px;
+}
+#about-us {
+  background-color: #ef8354;
+  justify-content: flex-start;
+}
+
+#about-owner {
+  background-color: #2d3142;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+article h2 {
+  font-size: 50px;
+}
+
+article p {
+  width: 80%;
+}
+
+aside {
+  grid-column-start: 2;
+}
+
+#form {
+  width: 500px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  color: #2d3142;
+  display: grid;
+  grid-gap: 10px;
+}
+#form h2 {
+  font-size: 24px;
+}
+
+#form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #ef8354;
+  border: none;
+  border-radius: 4px;
+}
+
+.input-control {
+  display: grid;
+}
+
+.input-control input,
+select {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control input:invalid {
+  border: 2px solid hsl(0, 100%, 74%);
+}
+
+.input-control input:valid {
+  border: 2px solid green;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+
+@media only screen and (max-width: 780px) {
   .hamburger {
     display: block;
   }
@@ -187,7 +294,15 @@ h1 {
   .text-box p {
     width: 100%;
   }
+
+  #form {
+    width: 300px;
+  }
+  #form label {
+    display: none;
+  }
 }
+
 /* section {
   min-height: 100vh;
   width: 100%;

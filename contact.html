@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            $("#header").load("nav.html");
+        });
+    </script>
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <section id="contact-us">
+        <header id="header">
+
+        </header>
+        <article>
+            <h1>Contact Us</h1>
+        </article>
+        <article id="contact-container">
+            <form action="/" id="form">
+                <h2>Join us today!</h2>
+                <div class="input-control">
+                    <label for="firstname">First name</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="First name"
+                        pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" required>
+                    <div class="error"></div>
+                </div>
+
+                <div class="input-control">
+                    <label for="lastname">Last name</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Last name"
+                        pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" required>
+                    <div class="error"></div>
+                </div>
+
+                <div class="input-control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <div class="error"></div>
+                </div>
+
+                <div class="input-control">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone">
+                    <div class="error"></div>
+                </div>
+
+                <div class="input-control">
+                    <label for="fitnesslevel">Fitness Level</label>
+                    <select name="fitnesslevel" id="fitnesslevel">
+                        <option value="" disabled selected hidden>How active are you?</option>
+                        <option value="sedentary">Sedentary</option>
+                        <option value="moderate">Moderately active</option>
+                        <option value="active">Active</option>
+                        <option value="very">Very active</option>
+                    </select>
+                    <div class="error"></div>
+                </div>
+
+
+
+                <div class="input-control">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <div class="error"></div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </article>
+
+
+    </section>
+</body>
+
+</html>

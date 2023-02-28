@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Medical Co.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/c22438582c.js" crossorigin="anonymous"></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <main id="intro">
+        <section class="container">
+
+
+
+            <figure class="register-img">
+                <img src="img/assignment_svg.svg" alt="rocket">
+            </figure>
+
+            <h2 class="title">Register your pet</h2>
+            <form class="register-form" id="form" onsubmit="validate()">
+
+
+                <fieldset>
+
+                    <legend>Your details</legend>
+
+                    <div class="register-box">
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Enter your first name" class="register-input"
+                                title="Please enter only letters (hyphens and spaces may be included)" id="username"
+                                pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$" minlength="1" maxlength="10"
+                                oninput="checkUserName()" required>
+                            <label for="username">Name</label>
+                        </div>
+                        <p class="error-text" id="usr-error"></p>
+                    </div>
+
+                    <div class="register-box">
+                        <div class="input-box">
+                            <i class="fas fa-phone"></i>
+                            <input type="text" placeholder="Enter your phone number" class="register-input" id="phone"
+                                pattern="^(\+?\(61\)|\(\+?61\)|\+?61|\(0[1-9]\)|0[1-9])?( ?-?[0-9]){7,9}$" minlength="8"
+                                maxlength="10" title="Please enter a valid phone number" oninput="checkPhone()">
+                            <label for="phone">Phone</label>
+                        </div>
+                        <p class="error-text" id="phone-error"></p>
+                    </div>
+
+                    <div class="register-box">
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Enter your email address" class="register-input" id="email"
+                                oninput="checkEmail()" title="Please enter a valid email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <p class="error-text" id="email-error"></p>
+                    </div>
+
+                    <div class="register-box">
+                        <div class="input-box">
+                            <i class="fas fa-key"></i>
+                            <input type="password" placeholder="Enter your password" class="register-input"
+                                id="password1" oninput="passwordMatch()" minlength="8" maxlength="15"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                required>
+                            <label for="password1">Password</label>
+                        </div>
+                    </div>
+
+
+                    <div class="register-box">
+                        <div class="input-box">
+                            <i class="fas fa-key"></i>
+                            <input oninput="passwordMatch()" type="password" placeholder="Confirm your password"
+                                class="register-input" id="password2" minlength="8" maxlength="15"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                required>
+                            <label for="password2">Confirm Password</label>
+                        </div>
+                        <p class="error-text" id="pass-error">
+                        </p>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Your pet's details</legend>
+
+                    <div class="register-box">
+                        <div class="input-box">
+                            <i class="fas fa-paw"></i>
+                            <input type="text" placeholder="Enter your pet's name" class="register-input" id="petname"
+                                oninput="checkPetName()" maxlength="10"
+                                pattern="^(?=.{1,40}$)[a-zA-Z]+(?:[-'\s][a-zA-Z]+)*$"
+                                title="Please enter your pet's name" required>
+                            <label for="petname">Pet's name</label>
+                        </div>
+                        <div class="error-text" id="pet-error"></div>
+                    </div>
+
+                    <div class="register-box">
+                        <div class="input-box">
+                            <i class="fas fa-table"></i>
+                            <input type="number" id="age" class="register-input" min="0" max="20"
+                                placeholder="Enter your pets age" title="Please enter your pet's age" required>
+                            <label for="age">Age</label>
+                        </div>
+                    </div>
+
+
+                    <div class="register-box">
+
+                        <div class="custom-select">
+                            <select name="species" id="species" required>
+                                <option value="" disabled selected hidden>What species is your pet?</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="bird">Bird</option>
+                                <option value="reptile">Reptile</option>
+                            </select>
+                        </div>
+                        <label for="species">Species</label>
+                    </div>
+
+                    <div class="register-box">
+
+                        <input type="checkbox" name="agree" id="agree" required>
+                        <label for="agree" class="agree-label">Agree to terms and conditions:</label>
+                    </div>
+
+                </fieldset>
+
+                <section class="viewport">
+                    <h4 id="help-text">Need some help?</h4>
+                    <video class="vid" id="video" src="img/happy-pet-co.mp4" controls autoplay muted loop>
+                    </video>
+                </section>
+
+                <input type="submit" class="register-btn" id="register-btn" name="submit" value="Create Account">
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+</body>
+
+</html>
